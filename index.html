@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card Generator</title>
+  <link rel="stylesheet" href="id.css">
+</head>
+<body>
+
+  <!-- Form Section -->
+  <div class="form-box">
+    <h3>Enter Student Details</h3>
+    <input type="text" id="name" placeholder="Name">  
+    <input type="text" id="Rno" placeholder="Roll No."> 
+    <input type="date" id="dob"  placeholder="Date of Birth"> 
+    <input type="text" id="year" placeholder="Year of Admission">
+
+<select id="branch">
+  <option value="">-- Select Branch --</option>
+  <option value="Computer Engineering"> Computer Engineering</option>
+  <option value="Information Technology">Information Technology</option>
+  <option value="Electronics & Telecommunication">Electronics & Telecommunication</option>
+  <option value="Electrical Engineering">Electrical Engineering</option>
+  <option value="Mechanical Engineering">Mechanical Engineering</option>
+  <option value="Civil Engineering">Civil Engineering</option>
+  <option value="Artificial Intelligence & Data Science">AI & Data Science</option>
+  <option value="Artificial Intelligence & Machine Learning">AI &  Machine learning</option>
+</select>
+
+    <input type="text" id="address" placeholder="Address"  maxlength="50">
+    <input type="text" id="phone" placeholder="Phone Number ☎">
+    <input type="file" id="photo" accept="image/*">
+
+    <input type="text" id="validity" placeholder="Validity Upto" required>
+
+    <button onclick="generateID()">Generate ID Card</button>  
+
+    <div id="errorBox" style="color: red; margin-top: 10px; font-weight: bold;"></div>
+  </div>
+
+
+
+  <div class="id-card" id="idCard">
+    <div class="header"> 
+        <img src="logo.jpeg" alt="College Logo" class="college-logo">
+      B R HARNE COLLEGE OF ENGINEERING & TECHNOLOGY
+     
+    </div>
+    
+    <div class="id-title">STUDENT ID</div> 
+
+    
+
+    <div class="content">
+      <div class="details">
+      
+        <p><strong>Name:</strong> <span id="idName"></span></p>
+        <p><strong>R.NO:</strong> <span id="iRno"></span></p>
+        <p><strong>D.O.B.:</strong> <span id="idDob"></span></p>
+        <p><strong>Addmission year:</strong> <span id="iyear"></span></p>
+        <p><strong>Branch:</strong> <span id="idBranch"></span></p>
+        <p><strong>Address:</strong> <span id="idAddress"></span></p>
+        <p><strong>Phone  ☎:</strong> <span id="idPhone"></span></p> 
+        <p><strong>Validity Upto:</strong> <span id="idValidity"></span></p>
+
+
+          <div class="signature-absolute">
+    <img src="sign.jpg" alt="Principal Signature" class="sign-img">
+      <span class="sig-label">Principal</span>
+
+  </div>
+ 
+  
+        
+      </div>
+      <div class="photo-box">
+        <img id="idPhoto" src="" alt="Photo">
+      </div>
+    </div>
+
+
+  
+    
+    <div class="footer"> 
+          <div class="address">
+    Village Karav, Vangani (W) pin : 421503<br>
+    Ph: 0251-266018/9 ,Website: www.brharnecet.org
+    </div>
+      
+      </div> 
+    </div> 
+    <button id="downloadBtn">Download ID Card</button>
+
+  </div> 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+
+
+
+  <script src="id.js"></script>
+</body>
+</html>
